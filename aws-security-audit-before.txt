@@ -1,0 +1,48 @@
+============================================================
+       AWS SECURITY AUDIT REPORT
+       Generated: 2026-04-05 00:10:44
+============================================================
+
+[ S3 BUCKETS ]
+
+  Bucket: lambda-hosting12
+    → PASS - Public access blocked
+    → FAIL - Versioning not enabled
+    → PASS - Server-side encryption enabled
+
+  Bucket: my-own-static-bucket112
+    → PASS - Public access blocked
+    → FAIL - Versioning not enabled
+    → PASS - Server-side encryption enabled
+
+
+[ IAM USERS ]
+
+  User: rayyan-cli
+    → FAIL - No MFA device attached
+    → FAIL - AdministratorAccess policy attached directly to user
+    → PASS - Access key AKIAX5Q4HQPZDKTJMF7K is 0 days old
+
+
+[ SECURITY GROUPS ]
+
+  SG: launch-wizard-1 (sg-0ce85233eea3085e1)
+    → PASS - No dangerous open ports to public internet
+
+  SG: default (sg-09df0c39a099be70b)
+    → PASS - No dangerous open ports to public internet
+
+  SG: server group (sg-045b482cd58a013ac)
+    → PASS - No dangerous open ports to public internet
+
+  SG: default (sg-0963e1b5a9f61ee45)
+    → PASS - No dangerous open ports to public internet
+
+
+[ CLOUDTRAIL ]
+
+  → FAIL - No CloudTrail trails configured
+
+============================================================
+END OF REPORT
+============================================================
